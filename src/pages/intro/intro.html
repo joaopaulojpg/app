@@ -1,0 +1,30 @@
+
+<ion-content padding>
+  <ion-slides pager>
+    
+      <ion-slide>
+          <a (click)="goToTabsPage()">skip</a>
+          <br/>  <br/>
+        <img src="../assets/images/slide1.gif" alt="">
+        
+      </ion-slide>
+    
+      <ion-slide>
+        <img src="../assets/images/slide2.png" alt="">
+    
+      </ion-slide>
+    
+      <ion-slide>
+        <img src="../assets/images/slide3.jpg" alt="">
+        <a (click)="goToTabsPage()">CLique aqui</a>
+      </ion-slide>
+    
+    </ion-slides>
+
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+</ion-content>
